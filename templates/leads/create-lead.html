@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{%block title%}Create Lead{% endblock title %}
+
+{% block content %}
+        <h3> Create a new lead </h3>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class=''>
+                <p class="">First Name: {{form.first_name}}</p>
+                <p class="leading-relaxed">last Name: {{form.last_name}}</p>
+                <p class="leading-relaxed">Age: {{form.age}}</p>
+                <p class="leading-relaxed">Age: {{form.agent}}</p>
+                </div>
+            
+                <div class="flex justify-center">
+                    <button type='submit'  class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Create Lead</button>
+                </div>
+                </form>
+
+{% endblock %}
